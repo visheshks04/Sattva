@@ -2,15 +2,12 @@ const mongoose = require("mongoose");
 const {Schema} = mongoose
 
 const RoomSchema = new mongoose.Schema({
-    name : {
+    tag : {
         type : String,
     },
-    members : [
-        {
-            type: Schema.Types.ObjectId, 
-            ref : 'user'
-        }
-    ]
+    token : {
+        type : String,
+    }
 })
 
 module.exports = Room = mongoose.model('room', RoomSchema);

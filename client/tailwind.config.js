@@ -15,6 +15,9 @@ module.exports = {
           100: '#1da1f2',
         },
       },
+      height : {
+        100 : "450px",
+      }
     },
   },
   variants: {

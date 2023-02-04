@@ -1,35 +1,29 @@
 const mongoose = require('mongoose');
 
 const StatesScehma = new mongoose.Schema({
-    happy : {
+    joy : {
         type : Number,
-        enum : [1,2,3,4],
-        default : 1,
+        default : 0,
     },
-    neutral : {
+    love : {
         type : Number,
-        enum : [1,2,3,4],
-        default : 1,
+        default : 0,
     },
-    sad : {
+    sadness : {
         type : Number,
-        enum : [1,2,3,4],
-        default : 1,
+        default : 0,
     },
-    angry : {
+    anger : {
         type : Number,
-        enum : [1,2,3,4],
-        default : 1,
+        default : 0,
     },
-    distrust : {
+    fear : {
         type : Number,
-        enum : [1,2,3,4],
-        default : 1,
+        default : 0,
     },
-    fearful : {
+    surprise : {
         type : Number,
-        enum : [1,2,3,4],
-        default : 1,
+        default : 0,
     },
     date : {
         type: String,
