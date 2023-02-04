@@ -2,11 +2,11 @@
 
 const { exec } = require("child_process");
 
-const executeModel = () => {
+const executeModel = (filePath) => {
 
     return new Promise((resolve, reject) => {
         exec(
-            `python3 ../predictor/insights.py uploads/audioFile-1675449001988.wav`,
+            `. ../env/bin/activate && python3 ../predictor/insights.py ./${filePath}`,
             (error, stdout, stderr) => {
                 error && reject({ error, stderr });
                 stderr && reject(stderr);

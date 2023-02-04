@@ -1,6 +1,6 @@
 :root {
   --background: white;
-  --foreground: black;
+  --foreground: white;
 }
 
 * {
@@ -26,11 +26,11 @@ body {
   width: 100%;
 }
 .page {
-  max-width: 1024px;
-  margin: 0 auto;
+  max-width: 80vw;
+  margin: 20px auto;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 

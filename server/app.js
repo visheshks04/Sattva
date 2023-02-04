@@ -6,7 +6,6 @@ const socketio = require("socket.io")
 const dotenv = require('dotenv');
 const connectDB = require('./database/connect');
 const manageToken = require('./ManageToken')
-
 const multer = require('multer');
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -21,8 +20,6 @@ const upload = multer({ storage });
 const token = manageToken()
 
 const executeModel = require('./executeModel')
-
-executeModel()
 
 console.log("THIS IS TOKEN : " + token);
 
@@ -45,7 +42,7 @@ const expressServer = app.listen(PORT, () => {
 })
 
 app.post('/audio/upload', upload.single('audioFile'), (req, res) => {
-    console.log(req.file);
+executeModel(req.file.path).then(response => console.log(response)).catch(err => console.log(err))
     res.json({ success: true });
 })
 
